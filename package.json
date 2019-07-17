@@ -1,0 +1,32 @@
+{
+  "name": "graphapijdr",
+  "version": "1.0.0",
+  "description": "API pour CRUD les données de la base postgresql pour l'application JDR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EtienneDuv/GraphApiJDR.git"
+  },
+  "keywords": [
+    "graphql",
+    "api",
+    "rpg",
+    "jdr"
+  ],
+  "author": "Etienne Duverney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EtienneDuv/GraphApiJDR/issues"
+  },
+  "homepage": "https://github.com/EtienneDuv/GraphApiJDR#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.6.9",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "graphql": "^14.4.2",
+    "pg-promise": "^8.7.4"
+  }
+}
