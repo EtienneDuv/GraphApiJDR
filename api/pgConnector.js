@@ -24,9 +24,10 @@ const db = pgp(config)
 //     .then(data => {
 //         console.log('Query sent')
 //         console.log(data)
-//         return data
 //     })
-//     .catch(error => { console.log('ERROR:', error); })
+//     .catch(error => { 
+//         console.log('ERROR:', error); 
+//     })
 
 // db.any(`SELECT * FROM joueur WHERE ID=1`)
 //     .then(test => {
