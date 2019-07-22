@@ -13,27 +13,5 @@ const config = {
 
 const db = pgp(config)
 
-// db.any('select * from joueur', [true])
-//     .then(data => {
-//         console.log(data)
-//         return data
-//     })
-//     .catch(error => { console.log('ERROR:', error); })
-
-// db.any(`select * from joueur`)
-//     .then(data => {
-//         console.log('Query sent')
-//         console.log(data)
-//     })
-//     .catch(error => { 
-//         console.log('ERROR:', error); 
-//     })
-
-// db.any(`SELECT * FROM joueur WHERE ID=1`)
-//     .then(test => {
-//         console.log(test[0])
-//     })
-
-
 
 module.exports.db = db
