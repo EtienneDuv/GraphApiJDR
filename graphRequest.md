@@ -1,4 +1,4 @@
-# ALLJOUEURS
+### ALLJOUEURS
 ```graphql
 query {
   allJoueurs {
@@ -10,7 +10,8 @@ query {
 }
 ```
 
-# ALLJEUX 
+### ALLJEUX 
+```graphql
 query {
     {
         id
@@ -18,8 +19,10 @@ query {
         infoPersonnage
     }
 }
+```
 
-# JOUEUR
+### JOUEUR
+```graphql
 query {
   joueur(id: 1) {
     id
@@ -28,8 +31,10 @@ query {
     mail
   }
 }
+```
 
-# JEU
+### JEU
+```graphql
 query {
   jeu(id: 1) {
     id
@@ -37,8 +42,10 @@ query {
     infoPersonnage
   }
 }
+```
 
-# ALLCAMPAGNES
+### ALLCAMPAGNES
+```graphql
 query {
   allCampagnes(id: 2) {
     nom
@@ -68,8 +75,10 @@ query {
     }
   }
 }
+```
 
-# PERSONNAGEDATA
+### PERSONNAGEDATA
+```graphql
 query {
   personnageData(id: 3) {
     id
@@ -84,8 +93,10 @@ query {
     }
   }
 }
+```
 
-# JOUEURDATA
+### JOUEURDATA
+```graphql
 query {
   joueur(id: 2) {
     prenom
@@ -115,3 +126,4 @@ query {
     }
   }
 }
+```
