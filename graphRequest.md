@@ -1,6 +1,5 @@
-# allJeux
-
 # ALLJOUEURS
+```graphql
 query {
   allJoueurs {
     id
@@ -9,6 +8,7 @@ query {
     mail
   }
 }
+```
 
 # ALLJEUX 
 query {
