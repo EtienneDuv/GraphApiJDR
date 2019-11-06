@@ -75,7 +75,6 @@ const resolvers = {
         },
         allJeux: async () => {
             const data = await queries.getJeux()
-            console.log("infoPerso:", data[0].infopersonnage)
             return data
         },
         joueur: async (root, { id }) => {

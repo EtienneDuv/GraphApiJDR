@@ -18,6 +18,6 @@ WORKDIR /code
 # Exposition du port 4000
 EXPOSE 4000
 
-RUN ip a
-
 CMD ["node", "api/server.js"]
+
+# Pour run l'API, `docker run -p 4000:4000 [image name]`
