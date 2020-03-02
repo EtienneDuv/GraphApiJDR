@@ -4,6 +4,8 @@ services:
     image: etienneduv/graphapi-jdr
     environment:
       - VERSION=${VERSION}
+    networks:
+      - traefik-net
     deploy:
       replicas: 1
       labels:
@@ -17,3 +19,6 @@ services:
         traefik.http.routers.adalon-jdr-insecure.entrypoints: web
         traefik.http.routers.adalon-jdr-insecure.rule: "Host(`jdr.adalon.epickiwi.fr`)"
         traefik.http.routers.adalon-jdr-insecure.middlewares: force-https@file
+networks:
+  traefik-net:
+    external: true
