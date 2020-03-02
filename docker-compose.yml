@@ -1,0 +1,19 @@
+version: '3'
+services:
+  django:
+    image: etienneduv/graphapi-jdr
+    environment:
+      - VERSION=${VERSION}
+    deploy:
+      replicas: 1
+      labels:
+        traefik.enable: "true"
+        traefik.http.services.adalon-jdr.loadbalancer.server.port: "4000"
+
+        traefik.http.routers.adalon-jdr.entrypoints: web-secure
+        traefik.http.routers.adalon-jdr.rule: "Host(`jdr.adalon.epickiwi.fr`)"
+        traefik.http.routers.adalon-jdr.tls.certresolver: letsencrypt
+
+        traefik.http.routers.adalon-jdr-insecure.entrypoints: web
+        traefik.http.routers.adalon-jdr-insecure.rule: "Host(`jdr.adalon.epickiwi.fr`)"
+        traefik.http.routers.adalon-jdr-insecure.middlewares: force-https@file
