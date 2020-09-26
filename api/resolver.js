@@ -32,28 +32,28 @@ const queries = {
   },
   campains: (idMj) => {
     return new Promise(reponse => {
-      db.any(`SELECT * FROM campagne WHERE idMj1=${idMj} OR idMj2=${idMj} OR idMj3=${idMj}`)
+      db.any(`SELECT * FROM campain WHERE idMj1=${idMj} OR idMj2=${idMj} OR idMj3=${idMj}`)
         .then(data => { reponse(data) })
         .catch(error => { console.log(error) })
     })
   },
-  campainScenario: (idCampagne) => {
+  campainScenario: (idCampain) => {
     return new Promise(reponse => {
-      db.one(`SELECT * FROM scenario WHERE idCampagne=${idCampagne}`)
+      db.one(`SELECT * FROM scenario WHERE idCampain=${idCampain}`)
         .then(data => { reponse(data) })
         .catch(error => { console.log(error) })
     })
   },
-  campainLogs: (idCampagne) => {
+  campainLogs: (idCampain) => {
     return new Promise(reponse => {
-      db.one(`SELECT * FROM log WHERE idCampagne=${idCampagne}`)
+      db.one(`SELECT * FROM log WHERE idCampain=${idCampain}`)
         .then(data => { reponse(data) })
         .catch(error => { console.log(error) })
     })
   },
-  campainNotes: (idCampagne) => {
+  campainNotes: (idCampain) => {
     return new Promise(reponse => {
-      db.one(`SELECT * FROM note WHERE idCampagne=${idCampagne}`)
+      db.one(`SELECT * FROM note WHERE idCampain=${idCampain}`)
         .then(data => { reponse(data) })
         .catch(error => { console.log(error) })
     })
@@ -101,7 +101,7 @@ const resolvers = {
       return data
     },
   },
-  Campagne: {
+  Campain: {
     dm1: async (parent, args, context, info) => {
       const data = await queries.player(parent.iddm1)
       return data
