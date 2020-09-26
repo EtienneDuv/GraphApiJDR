@@ -6,24 +6,24 @@ const typeDefs = gql`
 
 scalar JSON
 
-    type Joueur {
+    type Player {
         id: ID!
-        nom: String!
-        prenom: String!
+        surname: String!
+        name: String!
         mail: String!
     }
-    type Jeu {
+    type Game {
         id: ID!
-        nom: String!
-        infoPersonnage: JSON
+        surname: String!
+        characterData: JSON
     }
-    type Campagne {
+    type Campain {
         id: ID!
-        nom: String!
-        mj1: Joueur!
-        mj2: Joueur
-        mj3: Joueur
-        jeu: Jeu!
+        surname: String!
+        dm1: Player!
+        dm2: Player
+        dm3: Player
+        game: Game!
         scenario: Scenario!
         log: Log!
         note: Note!
@@ -40,29 +40,29 @@ scalar JSON
         id: ID!
         content: String
     }
-    type Personnage {
+    type Character {
         id: ID!
-        nom: String!
+        surname: String!
         info: JSON
-        jeu: Jeu!
-        joueur: Joueur
+        game: Game!
+        player: Player
     }
 
 
 
     type Query {
-        allJoueurs: [Joueur!]
-        allJeux: [Jeu!]
-        allCampagnes(id: ID!): [Campagne!]
-        joueur(id: ID!): Joueur
-        jeu(id: ID!): Jeu
-        personnageData(id: ID!): Personnage
+        players: [Player!]
+        games: [Game!]
+        campains(id: ID!): [Campain!]
+        player(id: ID!): Player
+        game(id: ID!): Game
+        characterData(id: ID!): Character
     }
 
 `
 
 const resolveFunctions = {
-    JSON: GraphQLJSON
+  JSON: GraphQLJSON
 };
 
 const jsSchema = makeExecutableSchema({ typeDefs: typeDefs, resolvers: resolveFunctions });
