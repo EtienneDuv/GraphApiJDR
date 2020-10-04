@@ -3,7 +3,8 @@ orbs:
   node: circleci/node@3.0.0
 jobs:
   test:
-    echo "testing"
+    override:
+      - echo "testing"
 workflows:
   node-tests:
     jobs:
