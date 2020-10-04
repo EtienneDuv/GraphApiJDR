@@ -4,4 +4,7 @@ orbs:
 workflows:
   node-tests:
     jobs:
-      - echo "testing"
+      - node/test
+test:
+  override:
+    - echo "test"
