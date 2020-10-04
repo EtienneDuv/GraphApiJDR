@@ -14,12 +14,12 @@ scalar JSON
     }
     type Game {
         id: ID!
-        surname: String!
+        name: String!
         characterData: JSON
     }
     type Campain {
         id: ID!
-        surname: String!
+        name: String!
         dm1: Player!
         dm2: Player
         dm3: Player
