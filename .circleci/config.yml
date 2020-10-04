@@ -12,4 +12,4 @@ jobs:
             - "f7:0e:2b:27:d0:46:9e:ad:9b:e6:5a:b3:67:7b:de:01"
       - run:
           name: deploy
-          command: ssh -oStrictHostKeyChecking=no epickiwi@epickiwi.fr "cd GraphApiJDR && ./deploy.sh"
+          command: ssh -oStrictHostKeyChecking=no epickiwi@epickiwi.fr "cd GraphApiJDR && git pull origin master && ./deploy.sh"
